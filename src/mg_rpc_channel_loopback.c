@@ -54,8 +54,8 @@ static bool mg_rpc_channel_loopback_get_authn_info(
   (void) ch;
   (void) auth_domain;
   (void) auth_file;
-  (void) authn;
-
+  struct mg_str username = mg_mk_str("admin");
+  authn->username = mg_strdup(username);
   return false;
 }
 
